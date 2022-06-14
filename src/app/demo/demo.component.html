@@ -1,0 +1,33 @@
+<!-- <p >
+{{ arr[2] }}
+</p> -->
+
+
+<!-- <p [innerText]="test"></p> -->
+<!-- <input [type]="type" [value]="val" class="border-2 border-red-300"> -->
+
+
+<!-- <span class="px-3 py-1 bg-red-200 text-red-900 rounded-md cursor-pointer" (click)="fun()">Button</span>
+<select (change)="change(x)" #x class="">
+  <option value="test1">Test1</option>
+  <option value="test2">Test2</option>
+  <option value="test3">Test3</option>
+  <option value="test4">Test4</option>
+</select> -->
+
+
+<!-- <input type="text" [(ngModel)]="model" class="border-2 border-red-300">
+{{model}} -->
+
+
+<!-- <span class="px-3 py-1 bg-red-200 text-red-900 rounded-md cursor-pointer" (click)="[isView=!isView,toggle()]">Button</span>
+<p *ngIf="isView">Found a problem with this page?</p> -->
+
+
+
+<span class="px-3 py-1 bg-red-200 text-red-900 rounded-md cursor-pointer" (click)="[isView=!isView]">Button</span>
+<p [ngClass]="{'text-red-800': isView, 'text-green-800': !isView}">Found a problem with this page?</p>
+
+
+
+
