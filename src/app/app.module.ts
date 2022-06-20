@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import { DemoComponent } from './demo/demo.component';
 import { Component1Component } from './component1/component1.component';
 import { Component2Component } from './component2/component2.component';
+import { DirectiveComponent } from './directive/directive.component';
+import { StyleDirectiveDirective } from './style-directive.directive';
+import { TodoProjectComponent } from './todo-project/todo-project.component';
 
 @NgModule({
   declarations: [
@@ -14,6 +17,9 @@ import { Component2Component } from './component2/component2.component';
     DemoComponent,
     Component1Component,
     Component2Component,
+    DirectiveComponent,
+    StyleDirectiveDirective,
+    TodoProjectComponent,
   ],
   imports: [
     BrowserModule,

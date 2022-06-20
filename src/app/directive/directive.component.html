@@ -1,0 +1,68 @@
+<p>directive works!</p>
+
+<!-- ngIf  -->
+
+<!-- <span class="px-3 py-1 bg-red-200 text-red-900 rounded-md cursor-pointer" (click)="isView=!isView">Button</span>
+<p *ngIf="isView && true">This is directive</p> -->
+
+<!-- <div *ngFor="let student of students" >
+    <div *ngIf="student.id%2!=0">
+      <span class="mx-2">{{ student.id }}</span>
+      <span class="mx-2">{{ student.name }}</span>
+      <span class="mx-2">{{ student.class }}</span>
+    </div>
+</div> -->
+
+<!--  i=0 -->
+<!-- <div *ngFor="let student of students;let i=index" >
+  <div *ngIf="(i+1)%2!=0">
+    <span class="mx-2">{{ i+1 }}</span>
+    <span class="mx-2">{{ student.id }}</span>
+    <span class="mx-2">{{ student.name }}</span>
+    <span class="mx-2">{{ student.class }}</span>
+  </div>
+</div> -->
+
+<!-- <div *ngFor="let student of students;let odd=odd" >
+  <div *ngIf="!odd">
+    <span class="mx-2">{{ student.id }}</span>
+    <span class="mx-2">{{ student.name }}</span>
+    <span class="mx-2">{{ student.class }}</span>
+  </div>
+  <div *ngIf="odd">
+    <span class="mx-2">{{ student.id }}</span>
+    <span class="mx-2">{{ student.name }}</span>
+    <span class="mx-2">{{ student.class }}</span>
+  </div>
+</div> -->
+
+<!-- <div *ngFor="let item of students;let i=index">
+  <span [ngSwitch]="i">
+    <p *ngSwitchCase="3">
+      {{ students[2].name }}
+    </p>
+    <p *ngSwitchCase="4">
+      {{ students[3].name }}
+    </p>
+    <p *ngSwitchCase="2">
+      {{ students[1].name }}
+    </p>
+    <p *ngSwitchDefault>
+      {{ students[0].name }}
+    </p>
+  </span>
+</div> -->
+
+<!-- <p *ngIf="classId==1" class="text-red-500 bg-red-100"> This is ngClass </p>
+<p *ngIf="classId==2" class="text-green-500 bg-gray-100"> This is ngClass </p>
+<p *ngIf="classId==3" class="text-yellow-500 bg-yellow-100"> This is ngClass </p> -->
+
+<!-- <p [ngClass]="{'text-red-500 bg-red-50': classId==1,'text-green-500 bg-gray-50': classId==2,
+'text-yellow-500 bg-yellow-50': classId==3}" >This is ngClass </p> -->
+
+
+<!-- <p [ngStyle]="{'background-color': styleId==1 ? 'yellow':'red','color': styleId==1 ? 'red':'yellow'}">This is ngStyle</p> -->
+
+
+
+<p appStyleDirective>This ids my custom Directive</p>
