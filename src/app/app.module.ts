@@ -10,6 +10,9 @@ import { Component2Component } from './component2/component2.component';
 import { DirectiveComponent } from './directive/directive.component';
 import { StyleDirectiveDirective } from './style-directive.directive';
 import { TodoProjectComponent } from './todo-project/todo-project.component';
+import { InputComponent } from './first-project/input/input.component';
+import { SelectComponent } from './first-project/select/select.component';
+import { TopNavComponent } from './first-project/top-nav/top-nav.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +23,9 @@ import { TodoProjectComponent } from './todo-project/todo-project.component';
     DirectiveComponent,
     StyleDirectiveDirective,
     TodoProjectComponent,
+    InputComponent,
+    SelectComponent,
+    TopNavComponent,
   ],
   imports: [
     BrowserModule,

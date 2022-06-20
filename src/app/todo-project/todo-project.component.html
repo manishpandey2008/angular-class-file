@@ -1,20 +1,6 @@
 <div class="w-screen h-screen bg-primary">
     <!--top-navbar -->
-  <div class="antialiased">
-      <div class="w-full bg-gray-100 text-yellow-700 shadow hover:shadow-md">
-        <div class="mx-auto flex max-w-screen-xl flex-col px-4 md:flex-row md:items-center md:justify-between md:px-6 lg:px-8">
-          <div class="flex flex-row items-center justify-between p-4">
-            <a href="#" class="dark-mode:text-white focus:shadow-outline rounded-lg text-lg font-semibold uppercase tracking-widest text-gray-900 focus:outline-none">TO DO PROJECT</a>
-          </div>
-          <nav class="hidden flex-grow flex-col pb-4 md:flex md:flex-row md:justify-end md:pb-0">
-            <a class="focus:shadow-outline mt-2 rounded-lg bg-transparent px-4 py-2 text-sm font-semibold border-b-2 border-gray-100 hover:border-yellow-700 hover:bg-gray-200 hover:text-gray-900 focus:bg-gray-200 focus:text-gray-900 focus:outline-none md:mt-0 md:ml-4" href="#">Blog</a>
-            <a class="focus:shadow-outline mt-2 rounded-lg bg-transparent px-4 py-2 text-sm font-semibold border-b-2 border-gray-100 hover:border-yellow-700 hover:bg-gray-200 hover:text-gray-900 focus:bg-gray-200 focus:text-gray-900 focus:outline-none md:mt-0 md:ml-4" href="#">Portfolio</a>
-            <a class="focus:shadow-outline mt-2 rounded-lg bg-transparent px-4 py-2 text-sm font-semibold border-b-2 border-gray-100 hover:border-yellow-700 hover:bg-gray-200 hover:text-gray-900 focus:bg-gray-200 focus:text-gray-900 focus:outline-none md:mt-0 md:ml-4" href="#">About</a>
-            <a class="focus:shadow-outline mt-2 rounded-lg bg-transparent px-4 py-2 text-sm font-semibold border-b-2 border-gray-100 hover:border-yellow-700 hover:bg-gray-200 hover:text-gray-900 focus:bg-gray-200 focus:text-gray-900 focus:outline-none md:mt-0 md:ml-4" href="#">Profile</a>
-          </nav>
-        </div>
-      </div>
-    </div>
+    <app-top-nav></app-top-nav>
 
     <div class="grid grid-cols-6 py-4">
       <div class="col-span-2">
@@ -22,33 +8,18 @@
           Student Form
         </div>
         <div class="container px-4 ">
-          <div>
-            <label for="">Student name</label>
-            <input type="text" placeholder="Enter student name" class="appearance-none w-full text-sm py-3 border-2 border-gray-300 rounded-md hover:border-green-400 focus:ring-0 focus:outline-none focus:border-green-600 px-3">
-          </div>
-          <div class="mt-2">
-            <label for="">Student mobile</label>
-            <input type="text" placeholder="Enter student mobile number" class="appearance-none w-full text-sm py-3 border-2 border-gray-300 rounded-md hover:border-green-400 focus:ring-0 focus:outline-none focus:border-green-600 px-3">
-          </div>
-          <div class="mt-2">
-            <label for="">Student class</label>
-            <select name="" id="" class=" w-full text-sm py-3 border-2 border-gray-300 rounded-md hover:border-green-400 focus:ring-0 focus:outline-none focus:border-green-600 px-3">
-              <OPtion value="">Select student class</OPtion>
-              <option value="1">Class 1</option>
-              <option value="2">Class 2</option>
-              <option value="3">Class 3</option>
-              <option value="4">Class 4</option>
-              <option value="5">Class 5</option>
-              <option value="6">Class 6</option>
-              <option value="7">Class 6</option>
-              <option value="8">Class 8</option>
-            </select>
-          </div>
+
+          <app-input [data]="name"  (response)="catch($event,'name')"></app-input>
+          <app-input [data]="mobile" (response)="catch($event,'mobile')"></app-input>
+          <app-select [data]="classDta" (response)="catch($event,'class')"></app-select>
+
           <div class="mt-8">
-            <span class="px-4 py-2 bg-green-500 text-white text-sm font-semibold border-8 border-green-500  rounded-md hover:opacity-80 cursor-pointer shadow">Add student</span>
+            <span class="px-4 py-2 bg-green-500 text-white text-sm font-semibold border-8 border-green-500
+            rounded-md hover:opacity-80 cursor-pointer shadow" (click)="addStudent()">Add student</span>
           </div>
         </div>
       </div>
+
       <div class="col-span-4">
 
         <body class="px-4">
