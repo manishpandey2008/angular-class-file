@@ -20,6 +20,7 @@
         </div>
       </div>
 
+
       <div class="col-span-4">
 
         <body class="px-4">
@@ -27,39 +28,7 @@
             Student Table
           </div>
           <div class="container">
-            <table class="w-full sm:bg-white rounded-lg overflow-hidden my-5">
-              <thead class="text-white bg-gray-400 ">
-                <tr class=" rounded-l-lg mb-2 sm:mb-0">
-                  <th class="p-3 text-left">S.No</th>
-                  <th class="p-3 text-left">Name</th>
-                  <th class="p-3 text-left">Phone</th>
-                  <th class="p-3 text-left">Class</th>
-                  <th class="p-3 text-left">Action</th>
-                </tr>
-              </thead>
-              <tbody class="">
-                <tr class=" mb-2 sm:mb-0">
-                  <td class="border-grey-light border p-3">1</td>
-                  <td class="border-grey-light border p-3">Manish Pandey</td>
-                  <td class="border-grey-light border p-3 truncate">7865654343</td>
-                  <td class="border-grey-light border p-3 truncate">10</td>
-                  <td class="border-grey-light border selection:p-3  cursor-pointer">
-                    <span class="text-xs px-4 py-2 rounded-full hover:bg-gray-200 ml-3">Delete</span>
-                    <span class="text-xs px-4 py-2 rounded-full hover:bg-gray-200 ml-3">Edit</span>
-                  </td>
-                </tr>
-                <tr class=" mb-2 sm:mb-0">
-                  <td class="border-grey-light border p-3">1</td>
-                  <td class="border-grey-light border p-3">Manish Pandey</td>
-                  <td class="border-grey-light border p-3 truncate">7865654343</td>
-                  <td class="border-grey-light border p-3 truncate">10</td>
-                  <td class="border-grey-light border selection:p-3  cursor-pointer">
-                    <span class="text-xs px-4 py-2 rounded-full hover:bg-gray-200 ml-3">Delete</span>
-                    <span class="text-xs px-4 py-2 rounded-full hover:bg-gray-200 ml-3">Edit</span>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+           <app-table [tableHeader]="tableHeader" [tableData]="studentData" (respose)="deleteStudent($event)"></app-table>
           </div>
         </body>
       </div>

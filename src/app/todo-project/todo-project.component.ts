@@ -22,12 +22,17 @@ export class TodoProjectComponent implements OnInit {
     {label:'Class 9',value:'9'}
   ]
 
+  tableHeader=[
+    { label:"Student Phone",field:"phone"},
+    { label:"Student Name",field:"name"},
+    { label:"Student Class",field:"class"}
+  ]
+
   // studentData:any[]=[]
   studentData:{name:string,phone:string,class:string}[]=[]
 
   studentObj={name:"",phone:"",class:""};
 
-  // 78y698
 
   constructor() { }
 
@@ -46,8 +51,24 @@ export class TodoProjectComponent implements OnInit {
 
 
   addStudent(){
-    this.studentData.push(this.studentObj)
-    this.studentObj={name:"",phone:"",class:""};
+    let map:string[]=this.studentData.map(e=>e.phone);
+    if(!map.includes(this.studentObj.phone)){
+      this.studentData.push(this.studentObj)
+      this.studentObj={name:"",phone:"",class:""};
+    }
+  }
+
+
+  deleteStudent(id:any){
+    let map:string[]=this.studentData.map(e=>e.phone);
+
+    console.log(map)
+
+    console.log(map.indexOf(id))
+    // [2,5,7,8,0,7,7]
+    // arr.splice(2,3) => [2,5,7,7]
+
+    this.studentData.splice(map.indexOf(id),1);
   }
 
 

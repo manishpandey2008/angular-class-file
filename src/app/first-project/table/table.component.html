@@ -1,0 +1,32 @@
+<table class="w-full sm:bg-white rounded-lg overflow-hidden my-5">
+  <thead class="text-white bg-gray-400 ">
+    <tr class=" rounded-l-lg mb-2 sm:mb-0">
+      <th class="p-3 text-left">S.No</th>
+      <ng-container *ngFor="let item of tableHeader">
+        <th class="p-3 text-left">{{item.label}}</th>
+      </ng-container>
+      <th class="p-3 text-left">Action</th>
+    </tr>
+  </thead>
+  <tbody class="">
+
+    <ng-container *ngFor="let item of tableData;let id=index">
+      <tr class=" mb-2 sm:mb-0">
+        <td class="border-grey-light border p-3">{{id+1}}</td>
+
+        <ng-container *ngFor="let x of tableHeader">
+          <td class="border-grey-light border p-3">{{item[x.field]}}</td>
+        </ng-container>
+
+        <!-- <td class="border-grey-light border p-3">{{item.name}}</td>
+        <td class="border-grey-light border p-3 truncate">{{item.phone}}</td>
+        <td class="border-grey-light border p-3 truncate">Class {{item.class}}</td> -->
+
+        <td class="border-grey-light border selection:p-3  cursor-pointer">
+          <span class="text-xs px-4 py-2 rounded-full hover:bg-gray-200 ml-3" (click)="delete(item.phone)">Delete</span>
+          <span class="text-xs px-4 py-2 rounded-full hover:bg-gray-200 ml-3">Edit</span>
+        </td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>

@@ -13,6 +13,7 @@ import { TodoProjectComponent } from './todo-project/todo-project.component';
 import { InputComponent } from './first-project/input/input.component';
 import { SelectComponent } from './first-project/select/select.component';
 import { TopNavComponent } from './first-project/top-nav/top-nav.component';
+import { TableComponent } from './first-project/table/table.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { TopNavComponent } from './first-project/top-nav/top-nav.component';
     InputComponent,
     SelectComponent,
     TopNavComponent,
+    TableComponent,
   ],
   imports: [
     BrowserModule,
