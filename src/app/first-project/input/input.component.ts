@@ -7,7 +7,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class InputComponent implements OnInit {
 
-  @Input() data:any; // {label:'Student name',placeHolder:'Enter student name'};
+  @Input() data:any; // {label:'Student name',placeHolder:'Enter student name',type:'number'};
   @Output() response=new EventEmitter;
 
   storeText:String=""

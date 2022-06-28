@@ -14,6 +14,15 @@ import { InputComponent } from './first-project/input/input.component';
 import { SelectComponent } from './first-project/select/select.component';
 import { TopNavComponent } from './first-project/top-nav/top-nav.component';
 import { TableComponent } from './first-project/table/table.component';
+import { ServiceTestComponent } from './service/service-test/service-test.component';
+import { ServiceTest2Component } from './service/service-test2/service-test2.component';
+import { BlogComponent } from './route/blog/blog.component';
+import { PortfolioComponent } from './route/portfolio/portfolio.component';
+import { AboutComponent } from './route/about/about.component';
+import { ProfileComponent } from './route/profile/profile.component';
+import { PageNotFoundComponent } from './route/page-not-found/page-not-found.component';
+import { HomeChild1Component } from './route/home-child1/home-child1.component';
+import { HomeChild2Component } from './route/home-child2/home-child2.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +37,15 @@ import { TableComponent } from './first-project/table/table.component';
     SelectComponent,
     TopNavComponent,
     TableComponent,
+    ServiceTestComponent,
+    ServiceTest2Component,
+    BlogComponent,
+    PortfolioComponent,
+    AboutComponent,
+    ProfileComponent,
+    PageNotFoundComponent,
+    HomeChild1Component,
+    HomeChild2Component,
   ],
   imports: [
     BrowserModule,

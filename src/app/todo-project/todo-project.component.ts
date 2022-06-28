@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class TodoProjectComponent implements OnInit {
 
 
-  name={label:'Student name',placeHolder:'Enter student name'};
-  mobile={label:'Student phone number',placeHolder:'Enter student phone number'}
+  name={label:'Student name',placeHolder:'Enter student name',type:"text"};
+  mobile={label:'Student phone number',placeHolder:'Enter student phone number',type:"text"}
   classDta=[
     {label:'Class 1',value:'1'},
     {label:'Class 2',value:'2'},
