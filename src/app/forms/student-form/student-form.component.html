@@ -1,0 +1,48 @@
+<!-- <input type="text" [formControl]="formData"  class=" border-2 border-red-800">
+{{formData.value}} -->
+
+
+
+
+<!-- formGroup  -->
+
+<!-- <div [formGroup]="formGroup">
+
+  <input type="text" formControlName="studentName" class=" border-2 border-red-800 "> <br> <br>
+
+  <select  class=" border-2 border-red-800 " formControlName="studentClass">
+    <option value="test1">Test1</option>
+    <option value="test2">Test2</option>
+    <option value="test3">Test3</option>
+    <option value="test4">Test4</option>
+  </select>
+  <br><br>
+  <input type="checkbox" name="" id="" formControlName="isStoreInfo">Store Information<br><br>
+
+  <input type="radio" name="gender" id="" formControlName="gender" value="male"> Male
+  <input type="radio" name="gender" id="" formControlName="gender" value="female"> Female
+</div> -->
+<!-- <span class="px-3 py-1 bg-red-200 text-red-900 rounded-md cursor-pointer" (click)="getVal()">Button</span> -->
+
+
+<!-- formArray  -->
+
+
+<div [formGroup]="formGrop">
+  <div formArrayName="studentNames">
+    <div *ngFor="let item of names.controls;let i=index">
+      <input type="text" [formControlName]="i" class=" border-2 border-red-800 "> <br> <br>
+    </div>
+  </div>
+</div>
+
+
+
+
+<span class="px-3 py-1 bg-red-200 text-red-900 rounded-md cursor-pointer" (click)="addNewField()">+ Add new</span>
+
+<span class="px-3 py-1 bg-red-200 text-red-900 rounded-md cursor-pointer" (click)="getVal()">Get Data</span>
+
+<pre>
+  {{formGrop.value | json}}
+</pre>

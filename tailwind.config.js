@@ -3,14 +3,7 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
-    extend: {
-      colors:{
-        primary:"#abcdef"
-      }
-    },
+    extend: {},
   },
   plugins: [],
 }
-
-
-

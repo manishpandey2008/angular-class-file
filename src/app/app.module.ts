@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -23,6 +23,7 @@ import { ProfileComponent } from './route/profile/profile.component';
 import { PageNotFoundComponent } from './route/page-not-found/page-not-found.component';
 import { HomeChild1Component } from './route/home-child1/home-child1.component';
 import { HomeChild2Component } from './route/home-child2/home-child2.component';
+import { StudentFormComponent } from './forms/student-form/student-form.component';
 
 @NgModule({
   declarations: [
@@ -46,11 +47,13 @@ import { HomeChild2Component } from './route/home-child2/home-child2.component';
     PageNotFoundComponent,
     HomeChild1Component,
     HomeChild2Component,
+    StudentFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
