@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-student-form',
@@ -18,30 +18,59 @@ export class StudentFormComponent implements OnInit {
   // });
 
 
-  formGrop=new FormGroup({
-    studentNames:new FormArray([])
-  })
-
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
+
+
+
+  //  formGrop=new FormGroup({
+  //   studentNames:new FormArray([])
+  // })
+  // get names():FormArray{
+  //   return this.formGrop.get('studentNames') as FormArray;
+  // }
+  // addNewField(){
+  //   //let arr:FormArray= this.formGrop.get('studentNames') as FormArray;
+  //   this.names.push(new FormControl(''));
+  // }
+
+
+  // formGrop=new FormGroup({
+  //   schoolName:new FormControl(''),
+  //   studentDetails:new FormArray([])
+  // })
+
+  // get details():FormArray{
+  //   return this.formGrop.get('studentDetails') as FormArray;
+  // }
+
+  // addNewObj(){
+  //     let studentData=new FormGroup({
+  //       studentName:new FormControl(''),
+  //       studentGender:new FormControl('male')
+  //     });
+  //     this.details.push(studentData);
+  // }
+
+
+
+
+  formGroup=new FormGroup({
+    name:new FormControl('',[Validators.required,Validators.maxLength(20)]),
+    count:new FormControl(0,Validators.max(10))
+  });
+
+
   getVal(){
-    // console.log(this.formGroup.value)
-
-    console.log(this.formGrop.value)
+    if(this.formGroup.valid){
+      console.log(this.formGroup.value)
+    }else{
+      alert("Your form is not valid !! :)")
+    }
   }
 
-  get names():FormArray{
-    return this.formGrop.get('studentNames') as FormArray;
-  }
-
-
-
-  addNewField(){
-    // let arr:FormArray= this.formGrop.get('studentNames') as FormArray;
-    this.names.push(new FormControl(''));
-  }
 }

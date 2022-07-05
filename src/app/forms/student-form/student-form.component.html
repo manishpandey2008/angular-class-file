@@ -28,21 +28,66 @@
 <!-- formArray  -->
 
 
-<div [formGroup]="formGrop">
+<!-- <div [formGroup]="formGrop">
   <div formArrayName="studentNames">
     <div *ngFor="let item of names.controls;let i=index">
       <input type="text" [formControlName]="i" class=" border-2 border-red-800 "> <br> <br>
     </div>
   </div>
 </div>
+<span class="px-3 py-1 bg-red-200 text-red-900 rounded-md cursor-pointer" (click)="addNewField()">+ Add new</span> -->
 
 
 
 
-<span class="px-3 py-1 bg-red-200 text-red-900 rounded-md cursor-pointer" (click)="addNewField()">+ Add new</span>
+<!-- <div [formGroup]="formGrop">
+  <input type="text" formControlName="schoolName" class=" border-2 border-red-800 " placeholder="School name" > <br> <br>
+  <div formArrayName="studentDetails">
+    <div *ngFor="let item of details.controls;let i=index">
+      <div [formGroupName]="i">
+        <span>Student No {{i+1}}</span> <br>
+        <input type="text" formControlName="studentName" class=" border-2 border-red-800 "> <br> <br>
 
-<span class="px-3 py-1 bg-red-200 text-red-900 rounded-md cursor-pointer" (click)="getVal()">Get Data</span>
+        <input type="radio" formControlName="studentGender" value="male"> Male
+        <input type="radio" formControlName="studentGender" value="female"> Female
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+<span class="px-3 py-1 bg-red-200 text-red-900 rounded-md cursor-pointer" (click)="addNewObj()">+ Add Student Details</span>
 
-<pre>
-  {{formGrop.value | json}}
-</pre>
+<span class="px-3 py-1 bg-red-200 text-red-900 rounded-md cursor-pointer" (click)="getVal()">Get Data</span> -->
+
+
+
+
+
+
+
+<div [formGroup]="formGroup">
+  <input type="text" formControlName="name" class=" border-2 border-red-800 " >
+
+  <div *ngIf="formGroup.controls['name'].invalid && (formGroup.controls['name'].dirty || formGroup.controls['name'].touched)" class="alert">
+      <div *ngIf="formGroup.controls['name'].errors?.['required']">
+        Name field is required
+      </div>
+      <div *ngIf="formGroup.controls['name'].errors?.['maxLength']">
+          Max length is 20
+      </div>
+  </div>
+
+  <br> <br>
+
+  <input type="number" formControlName="count" class=" border-2 border-red-800 ">
+
+  <div *ngIf="formGroup.controls['count'].invalid && (formGroup.controls['count'].dirty || formGroup.controls['count'].touched)" class="alert">
+    <div *ngIf="formGroup.controls['count'].errors?.['max']">
+        Max val is 10
+    </div>
+</div>
+<br><br>
+  <button  [ngClass]="{'bg-red-200': !formGroup.valid,'bg-green-300':formGroup.valid}"  class="border-2 border-red-400" (click)="getVal()">Save</button>
+</div>
+
+<!-- [disabled]="!formGroup.valid" -->
