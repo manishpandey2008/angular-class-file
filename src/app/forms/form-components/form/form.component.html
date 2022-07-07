@@ -1,0 +1,13 @@
+<div [formGroup]="formGroup">
+  <app-form-input [fieldName]="'studentName'" [formGroup]="formGroup"></app-form-input>
+  <app-form-select  [fieldName]="'studentClass'" [formGroup]="formGroup"></app-form-select>
+  <app-form-radio  [fieldName]="'gender'" [formGroup]="formGroup"></app-form-radio>
+  <app-form-checkbox  [fieldName]="'isStoreInfo'" [formGroup]="formGroup"></app-form-checkbox>
+</div>
+
+<br>
+<span (click)="getData()">Get Data</span>
+
+<pre>
+  {{formGroup.value | json}}
+</pre>

@@ -24,6 +24,11 @@ import { PageNotFoundComponent } from './route/page-not-found/page-not-found.com
 import { HomeChild1Component } from './route/home-child1/home-child1.component';
 import { HomeChild2Component } from './route/home-child2/home-child2.component';
 import { StudentFormComponent } from './forms/student-form/student-form.component';
+import { FormSelectComponent } from './forms/form-components/form-select/form-select.component';
+import { FormInputComponent } from './forms/form-components/form-input/form-input.component';
+import { FormRadioComponent } from './forms/form-components/form-radio/form-radio.component';
+import { FormCheckboxComponent } from './forms/form-components/form-checkbox/form-checkbox.component';
+import { FormComponent } from './forms/form-components/form/form.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +53,11 @@ import { StudentFormComponent } from './forms/student-form/student-form.componen
     HomeChild1Component,
     HomeChild2Component,
     StudentFormComponent,
+    FormSelectComponent,
+    FormInputComponent,
+    FormRadioComponent,
+    FormCheckboxComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,
