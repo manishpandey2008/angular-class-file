@@ -1,0 +1,32 @@
+{
+  "entity": "",
+  "formName": "Student Form",
+  "fieldList": [
+    {
+      "fieldName": "studentName",
+      "fieldLable": "Student name",
+      "placeholder": "Enter student name",
+      "inputType": "text",
+      "defultVal": "ABCDEF"
+    },
+    {
+      "fieldName": "studentClass",
+      "fieldLable": "Student Class",
+      "placeholder": "Select student class",
+      "inputType": "select",
+      "defultVal": ""
+    },
+    {
+      "fieldName": "isStoreInfo",
+      "fieldLable": "",
+      "placeholder": "Is store your information",
+      "inputType": "check"
+    },
+    {
+      "fieldName": "gender",
+      "fieldLable": "Gender",
+      "inputType": "radio",
+      "defultVal": "male"
+    }
+  ]
+}

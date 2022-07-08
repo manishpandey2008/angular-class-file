@@ -1,0 +1,26 @@
+<div [formGroup]="formGroup" *ngIf="isView">
+  <div>{{entity.formName}}</div>
+  <div *ngFor="let item of entity.fieldList">
+      <span [ngSwitch]="item.inputType">
+
+        <input [formControlName]="item.fieldName" *ngSwitchCase="'text'" type="text"  class=" border-2 border-red-800 ">
+
+        <select [formControlName]="item.fieldName" *ngSwitchCase="'select'" class=" border-2 border-red-800 " >
+          <option value="test1">Test1</option>
+          <option value="test2">Test2</option>
+          <option value="test3">Test3</option>
+          <option value="test4">Test4</option>
+        </select>
+
+        <span *ngSwitchCase="'check'">
+          <input [formControlName]="item.fieldName"   type="checkbox" name="" id="" >{{item.placeholder}}
+        </span>
+
+       <span *ngSwitchCase="'radio'">
+        <input [formControlName]="item.fieldName"  type="radio" name="gender" id="" value="male"> Male
+        <input [formControlName]="item.fieldName"  type="radio" name="gender" id=""  value="female"> Female
+      </span>
+
+      </span>
+  </div>
+</div>

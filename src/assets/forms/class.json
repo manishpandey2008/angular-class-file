@@ -1,0 +1,20 @@
+{
+  "entity": "",
+  "formName": "Class Form",
+  "fieldList": [
+    {
+      "fieldName": "ClassName",
+      "fieldLable": "Class name",
+      "placeholder": "Enter Class name",
+      "inputType": "text",
+      "defultVal": "ABCDEF"
+    },
+    {
+      "fieldName": "classTYPE",
+      "fieldLable": "Class Class",
+      "placeholder": "Select Class type",
+      "inputType": "select",
+      "defultVal": ""
+    }
+  ]
+}

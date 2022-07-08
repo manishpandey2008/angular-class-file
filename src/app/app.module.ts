@@ -29,6 +29,8 @@ import { FormInputComponent } from './forms/form-components/form-input/form-inpu
 import { FormRadioComponent } from './forms/form-components/form-radio/form-radio.component';
 import { FormCheckboxComponent } from './forms/form-components/form-checkbox/form-checkbox.component';
 import { FormComponent } from './forms/form-components/form/form.component';
+import { FormFactoryComponent } from './forms/json-forms/form-factory/form-factory.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -58,12 +60,14 @@ import { FormComponent } from './forms/form-components/form/form.component';
     FormRadioComponent,
     FormCheckboxComponent,
     FormComponent,
+    FormFactoryComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
