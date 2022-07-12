@@ -31,6 +31,7 @@ import { FormCheckboxComponent } from './forms/form-components/form-checkbox/for
 import { FormComponent } from './forms/form-components/form/form.component';
 import { FormFactoryComponent } from './forms/json-forms/form-factory/form-factory.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SelectCompComponent } from './select-comp/select-comp.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormCheckboxComponent,
     FormComponent,
     FormFactoryComponent,
+    SelectCompComponent,
   ],
   imports: [
     BrowserModule,

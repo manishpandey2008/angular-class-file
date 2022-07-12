@@ -1,9 +1,14 @@
 <div [formGroup]="formGroup" *ngIf="isView">
   <div>{{entity.formName}}</div>
   <div *ngFor="let item of entity.fieldList">
+    <div class="mt-4">
+      <label for="">{{item.fieldLable}}</label>
+    </div>
       <span [ngSwitch]="item.inputType">
 
         <input [formControlName]="item.fieldName" *ngSwitchCase="'text'" type="text"  class=" border-2 border-red-800 ">
+
+        <input [formControlName]="item.fieldName" *ngSwitchCase="'number'" type="number"  class=" border-2 border-red-800 ">
 
         <select [formControlName]="item.fieldName" *ngSwitchCase="'select'" class=" border-2 border-red-800 " >
           <option value="test1">Test1</option>
@@ -23,4 +28,6 @@
 
       </span>
   </div>
+<button (click)="getData()" [disabled]="formGroup.invalid" [ngClass]="{'bg-green-400': formGroup.valid ,'bg-red-400': formGroup.invalid}" class="border-2 border-gray-700 px-4 py-1.5 rounded">Add data</button>
 </div>
+

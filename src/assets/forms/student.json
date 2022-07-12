@@ -7,14 +7,32 @@
       "fieldLable": "Student name",
       "placeholder": "Enter student name",
       "inputType": "text",
-      "defultVal": "ABCDEF"
+      "defultVal": "ABCDEF",
+      "validation":{
+        "required":true,
+        "maxLength":20
+      }
+    },
+    {
+      "fieldName": "studentAge",
+      "fieldLable": "Student age",
+      "placeholder": "Enter student age",
+      "inputType": "number",
+      "defultVal": "5",
+      "validation":{
+        "required":true,
+        "min":5
+      }
     },
     {
       "fieldName": "studentClass",
       "fieldLable": "Student Class",
       "placeholder": "Select student class",
       "inputType": "select",
-      "defultVal": ""
+      "defultVal": "",
+      "validation":{
+        "required":true
+      }
     },
     {
       "fieldName": "isStoreInfo",

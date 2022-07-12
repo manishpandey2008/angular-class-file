@@ -7,7 +7,21 @@
       "fieldLable": "Class name",
       "placeholder": "Enter Class name",
       "inputType": "text",
-      "defultVal": "ABCDEF"
+      "defultVal": "ABCDEF",
+      "validation":{
+        "required":true,
+        "maxLength":20
+      }
+    },
+    {
+      "fieldName": "totalClass",
+      "fieldLable": "Total class",
+      "placeholder": "Enter total Class",
+      "inputType": "number",
+      "validation":{
+        "required":true,
+        "min":10
+      }
     },
     {
       "fieldName": "classTYPE",

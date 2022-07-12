@@ -1,4 +1,5 @@
 import { Component, Output } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -8,23 +9,24 @@ import { Component, Output } from '@angular/core';
 export class AppComponent {
 
   title = 'angular-demo';
-  originalData:any;
-  visibalData:any;
-
-  isView=false
-
-  arr:any[]=[
+  arr1:any[]=[
     {label:"Option 1",val:"1"},
     {label:"Option 2",val:"2"},
     {label:"Option 3",val:"3"},
     {label:"Option 4",val:"4"}
   ];
 
-  selectOption(val:any){
-    this.originalData=val.val;
-    this.visibalData=val.label;
-    this.isView=false
-  }
+  arr2:any[]=[
+    {label:"Item 1",val:"1"},
+    {label:"Item 2",val:"2"},
+    {label:"Item 3",val:"3"},
+    {label:"Item 4",val:"4"}
+  ];
+
+  formGroup=new FormGroup({
+    select1: new FormControl(''),
+    select2: new FormControl('')
+  })
 
 
 }

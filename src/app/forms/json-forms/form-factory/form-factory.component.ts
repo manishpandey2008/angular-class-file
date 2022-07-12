@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { FromService } from '../from.service';
 import { Entity } from '../model/entity';
 import { Field } from '../model/firld';
+import { Validation } from '../model/validation';
 
 @Component({
   selector: 'app-form-factory',
@@ -35,11 +36,23 @@ export class FormFactoryComponent implements OnInit {
       const tempFormGroup=new FormGroup({});
       jsonData.fieldList.forEach((field:Field)=>{
           const formControl= new FormControl(field.defultVal);
+          if(field.validation){
+            this.addValidation(field.validation,formControl)
+          }
           tempFormGroup.addControl(field.fieldName,formControl)
       })
       this.formGroup=tempFormGroup;
-
-      console.log(this.formGroup.value)
   }
 
+  addValidation(validationList:Validation,formControl:FormControl){
+    let arr:any[]=[]
+    if(validationList.maxLength)arr.push(Validators.maxLength(validationList.maxLength))
+    if(validationList.required)arr.push(Validators.required)
+    if(validationList.min)arr.push(Validators.min(validationList.min))
+    formControl.addValidators(arr);
+  }
+
+  getData(){
+      console.log(this.formGroup.value)
+  }
 }
