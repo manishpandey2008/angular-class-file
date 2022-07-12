@@ -27,6 +27,22 @@
       </span>
 
       </span>
+
+      <!-- Error messages -->
+      <span>
+        <div *ngIf="formGroup.controls[item.fieldName].invalid && (formGroup.controls[item.fieldName].dirty || formGroup.controls[item.fieldName].touched)" class="alert">
+          <div *ngIf="formGroup.controls[item.fieldName].errors?.['required']">
+            {{item.fieldLable}} field is required
+          </div>
+          <div *ngIf="formGroup.controls[item.fieldName].errors?.['maxlength']">
+            Max length is {{item.validation?.maxLength}}
+          </div>
+          <div *ngIf="formGroup.controls[item.fieldName].errors?.['min']">
+            Min val is 20
+          </div>
+        </div>
+      </span>
+
   </div>
 <button (click)="getData()" [disabled]="formGroup.invalid" [ngClass]="{'bg-green-400': formGroup.valid ,'bg-red-400': formGroup.invalid}" class="border-2 border-gray-700 px-4 py-1.5 rounded">Add data</button>
 </div>

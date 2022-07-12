@@ -32,6 +32,10 @@ import { FormComponent } from './forms/form-components/form/form.component';
 import { FormFactoryComponent } from './forms/json-forms/form-factory/form-factory.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SelectCompComponent } from './select-comp/select-comp.component';
+import { TestNewComponent } from './test-new/test-new.component';
+import { User1Component } from './observable/home/user1/user1.component';
+import { User2Component } from './observable/home/user2/user2.component';
+import { HomeComponent } from './observable/home/home.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +67,10 @@ import { SelectCompComponent } from './select-comp/select-comp.component';
     FormComponent,
     FormFactoryComponent,
     SelectCompComponent,
+    TestNewComponent,
+    User1Component,
+    User2Component,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

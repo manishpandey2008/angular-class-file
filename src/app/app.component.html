@@ -51,14 +51,28 @@
 <!-- <app-form-factory></app-form-factory> -->
 
 
-<div [formGroup]="formGroup">
+<!-- <div [formGroup]="formGroup">
   <app-select-comp [arr]="arr1" [FORMgROUP]="formGroup" [fieldName]="'select1'"></app-select-comp>
   <app-select-comp [arr]="arr2" [FORMgROUP]="formGroup" [fieldName]="'select2'"></app-select-comp>
 </div>
 
-{{formGroup.value | json}}
+{{formGroup.value | json}} -->
 
 
+<!-- <app-test-new></app-test-new> -->
+
+
+
+
+<div>
+  <a routerLink="./home1">Home</a><br>
+  <a routerLink="./user1">User1</a><br>
+  <a routerLink="./user2">User2</a>
+</div>
+<router-outlet></router-outlet>
+
+<!-- <app-user1></app-user1>
+<app-user2></app-user2> -->
 
 
 
