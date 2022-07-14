@@ -6,8 +6,8 @@
 </div>
 
 <br>
-<span (click)="getData()">Get Data</span>
+<span (click)="addData()" class="px-5 py-1 text-sm rounded bg-green-300 text-green-900 cursor-pointer">Add Data</span>
 
-<pre>
-  {{formGroup.value | json}}
-</pre>
+
+
+<app-table [tableHeader]="tableHeader" [tableData]="studentData" (respose)="deleteItem($event)"></app-table>

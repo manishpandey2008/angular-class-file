@@ -1,181 +1,36 @@
-<!-- <div class="overflow-y-auto ">
-  <table class="min-w-full box-border border-2 border-gray-6 ">
-    <thead class="bg-gray-7 box-border border-2 border-gray-6 ">
-      <tr class="sticky top-0 whitespace-nowrap pl-1 pr-4 py-3 text-left font-medium text-secondary-250 z-20  opacity-100 ">
-        <th class="w-11">
-          <input id="default-checkbox" type="checkbox" value=""
-            class="w-4 h-4 text-blue-2 bg-gray-100 rounded border-gray-300 focus:ring-blue-2 dark:focus:ring-blue-2 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 ml-2">
-          <span class="border-r-2 border-gray-16 px-2 py-2"></span>
-        </th>
-        <th class=" text-3sm font-semibold px-3 w-32">
-          <div class="border-r-2 border-gray-16 px-2 py-2">Actions</div>
-        </th>
-        <th class=" text-3sm font-semibold px-3 ">
-          <div class="border-r-2 border-gray-16 px-2 py-2">Song</div>
-        </th>
-        <th class=" text-3sm font-semibold px-3 ">
-          <div class="border-r-2 border-gray-16 px-2 py-2">Artist</div>
-        </th>
-        <th class=" text-3sm font-semibold px-3 ">
-          <div class="border-r-2 border-gray-16 px-2 py-2">Year</div>
-        </th>
-        <th class=" text-3sm font-semibold px-3 ">
-          <div class="border-r-2 border-gray-16 px-2 py-2">Song</div>
-        </th>
-        <th class=" text-3sm font-semibold px-3 w-20">
-          <div class="border-r-2 border-gray-16 px-2 py-2">Artist</div>
-        </th>
-        <th class=" text-3sm font-semibold px-3 w-20">
-          <div class="border-r-2 border-gray-16 px-2 py-2">Year</div>
-        </th>
-      </tr>
-    </thead>
+<!-- <div class="h-screen overflow-hidden">
+  <div class="bg-orange-300 py-4">Top NAV</div>
+  <div class="flex justify-start bg-blue-300">
+    <div class="relative h-screen px-8 bg-red-300">
+      <div class="z-10 file:w-full h-screen whitespace-nowrap">
+        Side Nav
+      </div>
+    </div>
+    <div class="overflow-y-auto border-gray-400 grid-hight px-5">
+      <table class="min-w-full ">
+        <thead>
+          <tr class="border-b border-gray-300 ">
+            <th *ngFor="let col of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,16,17,18,19,20,21,22]; index as i" scope="col"
+              class="bg-white sticky top-0 whitespace-nowrap py-4 text-left font-medium z-10"
+              [class.header-row]="i===0 || i===1" [ngClass]="{'left-0': i===0 ,'left-48':i===1}">
+              <div class="w-48">
+                First Name
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of [1,2,3,4,5,6,7,8,9,10,11,12,13,14];index as i">
+            <td *ngFor="let col of [1,2,3,4,5,6,7,8,9,10,11,12,13,14,16,17,18,19,20,21,22];index as ci"
+              class="py-4 text-sm text-gray-600 font-normal" [class.header]="ci===0 || ci==1" [ngClass]="{'bg-white left-0': ci==0,'left-48': ci==0}">
+              <span>
+                Manish Pandey
+              </span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
 
-    <tbody class="bg-white divide-y">
-      <tr class="h-12  bg-opacity-30 border-gray-6 ">
-
-        <td class="">
-          <input id="default-checkbox" type="checkbox" value=""
-            class="w-4 h-4 text-blue-2 bg-gray-100 rounded border-gray-300 focus:ring-blue-2 dark:focus:ring-blue-2 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 ml-2">
-        </td>
-
-        <td class="content-center">
-          <span class="flex flex-row ">
-            Action
-          </span>
-        </td>
-
-        <td class="text-3md  h-5 cursor-pointer text-blue-1">
-          <span class="w-60">
-            The Sliding Mr. Bones
-          </span>
-        </td>
-        <td class="text-3md  h-5  text-gray-15">
-          <span class="w-60">
-            Malcolm Lockyer
-          </span>
-        </td>
-        <td class="text-3md  h-5  text-gray-15">
-          <span class="w-60">
-            1961
-          </span>
-        </td>
-        <td class="text-3md  h-5  text-gray-15">
-          <span class="w-60">
-            The Sliding Mr. Bones
-          </span>
-        </td>
-        <td class="text-3md  h-5  text-gray-15">
-          <span class="w-60">
-            Malcolm Lockyer
-          </span>
-        </td>
-        <td class="text-3md  h-5  text-gray-15">
-          <span class="w-60">
-            1961
-          </span>
-        </td>
-
-
-      </tr>
-
-
-      <tr class="h-12  bg-opacity-30 border-gray-6 ">
-
-        <td class="">
-          <input id="default-checkbox" type="checkbox" value=""
-            class="w-4 h-4 text-blue-2 bg-gray-100 rounded border-gray-300 focus:ring-blue-2 dark:focus:ring-blue-2 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 ml-2">
-        </td>
-
-        <td class="content-center">
-          <span class="flex flex-row ">
-            Action
-          </span>
-        </td>
-
-        <td class="text-3md  h-5 cursor-pointer text-blue-1">
-          <span class="w-60">
-            The Sliding Mr. Bones
-          </span>
-        </td>
-        <td class="text-3md  h-5  text-gray-15">
-          <span class="w-60">
-            Malcolm Lockyer
-          </span>
-        </td>
-        <td class="text-3md  h-5  text-gray-15">
-          <span class="w-60">
-            1961
-          </span>
-        </td>
-        <td class="text-3md  h-5  text-gray-15">
-          <span class="w-60">
-            The Sliding Mr. Bones
-          </span>
-        </td>
-        <td class="text-3md  h-5  text-gray-15">
-          <span class="w-60">
-            Malcolm Lockyer
-          </span>
-        </td>
-        <td class="text-3md  h-5  text-gray-15">
-          <span class="w-60">
-            1961
-          </span>
-        </td>
-
-
-      </tr>
-
-
-      <tr class="h-12  bg-opacity-30 border-gray-6 ">
-
-        <td class="">
-          <input id="default-checkbox" type="checkbox" value=""
-            class="w-4 h-4 text-blue-2 bg-gray-100 rounded border-gray-300 focus:ring-blue-2 dark:focus:ring-blue-2 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600 ml-2">
-        </td>
-
-        <td class="content-center">
-          <span class="flex flex-row ">
-            Action
-          </span>
-        </td>
-
-        <td class="text-3md  h-5 cursor-pointer text-blue-1">
-          <span class="w-60">
-            The Sliding Mr. Bones
-          </span>
-        </td>
-        <td class="text-3md  h-5  text-gray-15">
-          <span class="w-60">
-            Malcolm Lockyer
-          </span>
-        </td>
-        <td class="text-3md  h-5  text-gray-15">
-          <span class="w-60">
-            1961
-          </span>
-        </td>
-        <td class="text-3md  h-5  text-gray-15">
-          <span class="w-60">
-            The Sliding Mr. Bones
-          </span>
-        </td>
-        <td class="text-3md  h-5  text-gray-15">
-          <span class="w-60">
-            Malcolm Lockyer
-          </span>
-        </td>
-        <td class="text-3md  h-5  text-gray-15">
-          <span class="w-60">
-            1961
-          </span>
-        </td>
-
-
-      </tr>
-
-
-    </tbody>
-  </table>
 </div> -->

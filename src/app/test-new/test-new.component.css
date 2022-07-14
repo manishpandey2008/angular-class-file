@@ -1,0 +1,11 @@
+.header-row {
+  z-index: 12;
+  position: sticky;
+}
+.header {
+  z-index: 10;
+  position: sticky;
+}
+.grid-hight{
+  height: 90vh;
+}
