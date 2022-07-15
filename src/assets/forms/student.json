@@ -4,7 +4,7 @@
   "fieldList": [
     {
       "fieldName": "studentName",
-      "fieldLable": "Student name",
+      "fieldLable": "Student Name",
       "placeholder": "Enter student name",
       "inputType": "text",
       "defultVal": "ABCDEF",
@@ -17,7 +17,7 @@
       "fieldName": "studentAge",
       "fieldLable": "Student age",
       "placeholder": "Enter student age",
-      "inputType": "number",
+      "inputType": "text",
       "defultVal": "5",
       "validation":{
         "required":true,

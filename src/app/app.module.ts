@@ -36,6 +36,7 @@ import { TestNewComponent } from './test-new/test-new.component';
 import { User1Component } from './observable/home/user1/user1.component';
 import { User2Component } from './observable/home/user2/user2.component';
 import { HomeComponent } from './observable/home/home.component';
+import { FormCallComponent } from './forms/json-forms/form-call/form-call.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { HomeComponent } from './observable/home/home.component';
     TestNewComponent,
     User1Component,
     User2Component,
-    HomeComponent
+    HomeComponent,
+    FormCallComponent
   ],
   imports: [
     BrowserModule,
