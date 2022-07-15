@@ -21,10 +21,10 @@
           <input [formControlName]="item.fieldName"   type="checkbox" name="" id="" >{{item.placeholder}}
         </span>
 
-       <span *ngSwitchCase="'radio'">
-        <input [formControlName]="item.fieldName"  type="radio" name="gender" id="" value="male"> Male
-        <input [formControlName]="item.fieldName"  type="radio" name="gender" id=""  value="female"> Female
-      </span>
+        <span *ngSwitchCase="'radio'">
+          <input [formControlName]="item.fieldName"  type="radio" name="gender" id="" value="male"> Male
+          <input [formControlName]="item.fieldName"  type="radio" name="gender" id=""  value="female"> Female
+        </span>
 
       </span>
 
@@ -47,3 +47,6 @@
 <button (click)="getData()" [disabled]="formGroup.invalid" [ngClass]="{'bg-green-400': formGroup.valid ,'bg-red-400': formGroup.invalid}" class="border-2 border-gray-700 px-4 py-1.5 rounded">Add data</button>
 </div>
 
+<pre>
+  {{ formGroup.value | json}}
+</pre>

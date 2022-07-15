@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { FromService } from '../from.service';
 import { Entity } from '../model/entity';
@@ -11,6 +11,8 @@ import { Validation } from '../model/validation';
   styleUrls: ['./form-factory.component.css']
 })
 export class FormFactoryComponent implements OnInit {
+
+  @Input() formName!:string;
 
 
   entity!:Entity;
@@ -25,20 +27,28 @@ export class FormFactoryComponent implements OnInit {
   }
 
   getFile(){
-    this.fromService.fileProvider('class').subscribe((resp:Entity)=>{
+    this.fromService.fileProvider(this.formName).subscribe((resp:Entity)=>{
       this.entity=resp;
       this.formMeker(resp);
       this.isView=true
     })
   }
 
+  //  formGroup=new FormGroup({
+  //   studentName:new FormControl(''),
+  //   studentClass:new FormControl(),
+  //   isStoreInfo: new FormControl(false),
+  //   gender:new FormControl('male')
+  // });
+
+
   formMeker(jsonData:Entity){
       const tempFormGroup=new FormGroup({});
       jsonData.fieldList.forEach((field:Field)=>{
           const formControl= new FormControl(field.defultVal);
-          if(field.validation){
-            this.addValidation(field.validation,formControl)
-          }
+          // if(field.validation){
+          //   this.addValidation(field.validation,formControl)
+          // }
           tempFormGroup.addControl(field.fieldName,formControl)
       })
       this.formGroup=tempFormGroup;
@@ -51,6 +61,8 @@ export class FormFactoryComponent implements OnInit {
     if(validationList.min)arr.push(Validators.min(validationList.min))
     formControl.addValidators(arr);
   }
+
+
 
   getData(){
       console.log(this.formGroup.value)
