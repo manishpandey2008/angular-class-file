@@ -12,7 +12,7 @@ export class SelectCompComponent implements OnInit {
   @Input() FORMgROUP!:FormGroup
   @Input() fieldName!:any
 
-  @Output() outPut=new EventEmitter;
+  // @Output() outPut=new EventEmitter;
 
   visibalData:any;
 
@@ -24,7 +24,7 @@ export class SelectCompComponent implements OnInit {
   selectOption(val:any){
     this.visibalData=val.label;
     this.isView=false
-    this.outPut.emit(val.val)
+    // this.outPut.emit(val.val)
     this.FORMgROUP.value[this.fieldName]=val.val
   }
 }

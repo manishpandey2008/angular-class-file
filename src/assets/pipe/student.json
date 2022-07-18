@@ -1,0 +1,24 @@
+{
+  "studentList":[
+      {
+        "studentName":"Student 1",
+        "schoolId":2,
+        "classId":1
+      },
+      {
+        "studentName":"Student 2",
+        "schoolId":2,
+        "classId":2
+      },
+      {
+        "studentName":"Student 3",
+        "schoolId":3,
+        "classId":4
+      },
+      {
+        "studentName":"Student 4",
+        "schoolId":1,
+        "classId":3
+      }
+  ]
+}

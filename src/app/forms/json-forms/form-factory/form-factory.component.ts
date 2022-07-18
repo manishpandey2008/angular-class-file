@@ -28,6 +28,7 @@ export class FormFactoryComponent implements OnInit {
 
   getFile(){
     this.fromService.fileProvider(this.formName).subscribe((resp:Entity)=>{
+      // console.log(resp)
       this.entity=resp;
       this.formMeker(resp);
       this.isView=true

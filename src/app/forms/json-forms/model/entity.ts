@@ -4,4 +4,5 @@ export class Entity{
   entity!:string;
   formName!:string;
   fieldList!:Field[];
+  gridCol?:string;
 }

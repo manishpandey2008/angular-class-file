@@ -7,4 +7,5 @@ export class Field{
   placeholder?:string;
   defultVal?:string;
   validation?:Validation;
+  colSpan?:string;
 }

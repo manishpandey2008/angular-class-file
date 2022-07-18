@@ -1,6 +1,7 @@
 {
   "entity": "",
   "formName": "Student Form",
+  "gridCol":"grid-cols-3",
   "fieldList": [
     {
       "fieldName": "studentName",
@@ -8,22 +9,13 @@
       "placeholder": "Enter student name",
       "inputType": "text",
       "defultVal": "ABCDEF",
+
       "validation":{
         "required":true,
         "maxLength":20
       }
     },
-    {
-      "fieldName": "studentAge",
-      "fieldLable": "Student age",
-      "placeholder": "Enter student age",
-      "inputType": "text",
-      "defultVal": "5",
-      "validation":{
-        "required":true,
-        "min":5
-      }
-    },
+
     {
       "fieldName": "studentClass",
       "fieldLable": "Student Class",
@@ -32,6 +24,18 @@
       "defultVal": "",
       "validation":{
         "required":true
+      }
+    },
+    {
+      "fieldName": "studentAge",
+      "fieldLable": "Student age",
+      "placeholder": "Enter student age",
+      "inputType": "text",
+      "defultVal": "5",
+      "colSpan":"col-span-3",
+      "validation":{
+        "required":true,
+        "min":5
       }
     },
     {

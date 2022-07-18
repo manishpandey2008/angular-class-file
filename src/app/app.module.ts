@@ -37,6 +37,8 @@ import { User1Component } from './observable/home/user1/user1.component';
 import { User2Component } from './observable/home/user2/user2.component';
 import { HomeComponent } from './observable/home/home.component';
 import { FormCallComponent } from './forms/json-forms/form-call/form-call.component';
+import { PipeDemoComponent } from './pipe/pipe-demo/pipe-demo.component';
+import { StudentPipe } from './pipe/student.pipe';
 
 @NgModule({
   declarations: [
@@ -72,7 +74,9 @@ import { FormCallComponent } from './forms/json-forms/form-call/form-call.compon
     User1Component,
     User2Component,
     HomeComponent,
-    FormCallComponent
+    FormCallComponent,
+    PipeDemoComponent,
+    StudentPipe
   ],
   imports: [
     BrowserModule,

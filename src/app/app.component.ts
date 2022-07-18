@@ -23,9 +23,17 @@ export class AppComponent {
     {label:"Item 4",val:"4"}
   ];
 
-  formGroup=new FormGroup({
+  formGroup1=new FormGroup({
+    studentName:new FormControl(''),
     select1: new FormControl(''),
     select2: new FormControl('')
+  })
+
+
+  formGroup2=new FormGroup({
+    studentName:new FormControl(''),
+    selectData1: new FormControl(''),
+    selectData2: new FormControl('')
   })
 
 

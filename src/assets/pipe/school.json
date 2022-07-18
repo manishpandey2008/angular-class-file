@@ -1,0 +1,24 @@
+{
+  "schoolList":[
+    {
+      "shoolName":"School 1",
+      "schoolId":1
+    },
+    {
+      "shoolName":"School 2",
+      "schoolId":2
+    },
+    {
+      "shoolName":"School 3",
+      "schoolId":3
+    },
+    {
+      "shoolName":"School 4",
+      "schoolId":4
+    },
+    {
+      "shoolName":"School 5",
+      "schoolId":5
+    }
+  ]
+}

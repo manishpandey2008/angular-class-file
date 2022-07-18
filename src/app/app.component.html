@@ -50,13 +50,27 @@
 
 <!-- <app-form-factory></app-form-factory> -->
 
+<!-- <app-form-call></app-form-call> -->
 
-<!-- <div [formGroup]="formGroup">
-  <app-select-comp [arr]="arr1" [FORMgROUP]="formGroup" [fieldName]="'select1'"></app-select-comp>
-  <app-select-comp [arr]="arr2" [FORMgROUP]="formGroup" [fieldName]="'select2'"></app-select-comp>
+
+<div [formGroup]="formGroup1">
+  <input  type="text" formControlName="studentName"  class=" border-2 border-red-800 ">
+  <app-select-comp [arr]="arr1" [FORMgROUP]="formGroup1" [fieldName]="'select1'"></app-select-comp>
+  <app-select-comp [arr]="arr2" [FORMgROUP]="formGroup1" [fieldName]="'select2'"></app-select-comp>
 </div>
 
-{{formGroup.value | json}} -->
+{{formGroup1.value | json}}
+
+
+<!-- <div [formGroup]="formGroup2">
+  <input  type="text" formControlName="studentName"  class=" border-2 border-red-800 ">
+  <app-select-comp [arr]="arr1" [FORMgROUP]="formGroup2" [fieldName]="'selectData1'"></app-select-comp>
+  <app-select-comp [arr]="arr2" [FORMgROUP]="formGroup2" [fieldName]="'selectData2'"></app-select-comp>
+</div>
+
+{{formGroup2.value | json}} -->
+
+
 
 
 <!-- <app-test-new></app-test-new> -->
@@ -75,4 +89,7 @@
 <app-user2></app-user2> -->
 
 
-<app-form-call></app-form-call>
+<!-- <app-form-call></app-form-call> -->
+
+
+<!-- <app-pipe-demo></app-pipe-demo> -->

@@ -1,0 +1,26 @@
+<!-- {{date | date:'mediumTime'}} -->
+
+<!-- <app-table [tableHeader]="tableHeader" [tableData]="studentData" ></app-table> -->
+
+<table class="w-full sm:bg-white rounded-lg overflow-hidden my-5">
+  <thead class="text-white bg-gray-400 ">
+    <tr class=" rounded-l-lg mb-2 sm:mb-0">
+      <!-- <th class="p-3 text-left">S.No</th> -->
+      <ng-container *ngFor="let item of tableHeader">
+        <th class="p-3 text-left">{{item.label}}</th>
+      </ng-container>
+    </tr>
+  </thead>
+  <tbody class="">
+    <ng-container *ngFor="let item of studentData;let i=index">
+      <tr class=" mb-2 sm:mb-0">
+        <ng-container *ngFor="let x of tableHeader">
+          <td *ngIf="x.field=='schoolId'" class="border-grey-light border p-3">{{ (item[x.field] | student:'school' | async)}}</td>
+          <td *ngIf="x.field=='classId'" class="border-grey-light border p-3">{{item[x.field] | student :'class' | async}}</td>
+          <td *ngIf="x.field!='schoolId' && x.field!='classId'" class="border-grey-light border p-3">{{item[x.field]}}</td>
+        </ng-container>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>
+
