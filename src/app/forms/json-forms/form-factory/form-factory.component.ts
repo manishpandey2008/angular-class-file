@@ -12,27 +12,16 @@ import { Validation } from '../model/validation';
 })
 export class FormFactoryComponent implements OnInit {
 
-  @Input() formName!:string;
-
+  isView=false
 
   entity!:Entity;
-  isView=false
 
   formGroup=new FormGroup({});
 
-  constructor(private fromService:FromService) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.getFile()
-  }
 
-  getFile(){
-    this.fromService.fileProvider(this.formName).subscribe((resp:Entity)=>{
-      // console.log(resp)
-      this.entity=resp;
-      this.formMeker(resp);
-      this.isView=true
-    })
   }
 
   //  formGroup=new FormGroup({
@@ -41,6 +30,17 @@ export class FormFactoryComponent implements OnInit {
   //   isStoreInfo: new FormControl(false),
   //   gender:new FormControl('male')
   // });
+
+
+  showForm(data:Entity){
+      this.entity=data;
+      this.formMeker(data)
+      this.isView=true;
+  }
+
+  hideForm(){
+    this.isView=false;
+  }
 
 
   formMeker(jsonData:Entity){
