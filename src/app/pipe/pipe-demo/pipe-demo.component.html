@@ -1,11 +1,10 @@
-<!-- {{date | date:'mediumTime'}} -->
+<!-- {{date | date:'short'}} -->
 
 <!-- <app-table [tableHeader]="tableHeader" [tableData]="studentData" ></app-table> -->
 
 <table class="w-full sm:bg-white rounded-lg overflow-hidden my-5">
   <thead class="text-white bg-gray-400 ">
     <tr class=" rounded-l-lg mb-2 sm:mb-0">
-      <!-- <th class="p-3 text-left">S.No</th> -->
       <ng-container *ngFor="let item of tableHeader">
         <th class="p-3 text-left">{{item.label}}</th>
       </ng-container>
