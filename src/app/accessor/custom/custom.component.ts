@@ -27,6 +27,7 @@ export class CustomComponent extends BaseControlComponent  {
     const self = this;
     self.onChange(data);
   }
+
   writeValue(obj: any): void {
     if(obj){
       this.text=obj

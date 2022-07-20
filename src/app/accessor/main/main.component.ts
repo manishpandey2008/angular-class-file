@@ -10,6 +10,7 @@ export class MainComponent implements OnInit {
 
   formGroup=new FormGroup({
     studentName:new FormControl(''),
+    studentDetails:new FormControl(),
     studentClass:new FormControl(),
     isStoreInfo: new FormControl(false),
     gender:new FormControl('male')

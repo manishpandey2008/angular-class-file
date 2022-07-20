@@ -41,6 +41,7 @@ import { PipeDemoComponent } from './pipe/pipe-demo/pipe-demo.component';
 import { StudentPipe } from './pipe/student.pipe';
 import { MainComponent } from './accessor/main/main.component';
 import { CustomComponent } from './accessor/custom/custom.component';
+import { DetailsComponent } from './accessor/details/details.component';
 
 @NgModule({
   declarations: [
@@ -80,7 +81,8 @@ import { CustomComponent } from './accessor/custom/custom.component';
     PipeDemoComponent,
     StudentPipe,
     MainComponent,
-    CustomComponent
+    CustomComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
