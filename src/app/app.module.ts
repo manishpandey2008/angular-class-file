@@ -39,6 +39,8 @@ import { HomeComponent } from './observable/home/home.component';
 import { FormCallComponent } from './forms/json-forms/form-call/form-call.component';
 import { PipeDemoComponent } from './pipe/pipe-demo/pipe-demo.component';
 import { StudentPipe } from './pipe/student.pipe';
+import { MainComponent } from './accessor/main/main.component';
+import { CustomComponent } from './accessor/custom/custom.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +78,9 @@ import { StudentPipe } from './pipe/student.pipe';
     HomeComponent,
     FormCallComponent,
     PipeDemoComponent,
-    StudentPipe
+    StudentPipe,
+    MainComponent,
+    CustomComponent
   ],
   imports: [
     BrowserModule,

@@ -25,13 +25,12 @@ export class FormCallComponent implements OnInit {
       this.entity=resp;
       this.form.showForm(resp)
     })
+
+
   }
 
   closeForm(){
     this.form.hideForm()
   }
-
-
-
 
 }

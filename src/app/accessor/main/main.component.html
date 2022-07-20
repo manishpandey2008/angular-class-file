@@ -1,0 +1,16 @@
+<div [formGroup]="formGroup">
+
+  <input type="text" formControlName="studentName" class=" border-2 border-red-800 "> <br> <br>
+
+  <app-custom formControlName="studentClass"></app-custom>
+
+  <input type="checkbox" name="" id="" formControlName="isStoreInfo">Store Information<br><br>
+
+  <input type="radio" name="gender" id="" formControlName="gender" value="male"> Male
+  <input type="radio" name="gender" id="" formControlName="gender" value="female"> Female
+</div>
+
+
+{{formGroup.value | json}}
+
+
