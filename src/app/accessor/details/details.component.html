@@ -1,10 +1,18 @@
 <div [formGroup]="details">
-  <input type="text"  formControlName="village"
-  class="appearance-none block w-1/2 pl-3  border text-secondary-1000 bg-secondary-600 border-secondary-600
-  border-l-0 rounded-r-sm placeholder-gray-400 focus:outline-none  focus:ring-secondary-600 focus:border-secondary-600"
-  >
-  <input type="text" formControlName="post"
-      class="appearance-none block w-1/2 pl-3  border text-secondary-1000 bg-secondary-600 border-secondary-600
-      border-l-0 rounded-r-sm placeholder-gray-400 focus:outline-none  focus:ring-secondary-600 focus:border-secondary-600"
-      >
+    <div formArrayName="arr">
+      <div *ngFor="let item of arr.controls;let i=index" [formGroupName]="i" class="flex justify-start gap-4 px-5">
+        <input type="number" formControlName="field1"
+          class="appearance-none block w-1/2 pl-3  border text-secondary-1000 bg-secondary-600 border-secondary-600
+          border-l-0 rounded-r-sm placeholder-gray-400 focus:outline-none  focus:ring-secondary-600 focus:border-secondary-600"
+          placeholder="Field 1">
+          <input type="text" formControlName="field2"
+          class="appearance-none block w-1/2 pl-3  border text-secondary-1000 bg-secondary-600 border-secondary-600
+          border-l-0 rounded-r-sm placeholder-gray-400 focus:outline-none  focus:ring-secondary-600 focus:border-secondary-600"
+          placeholder="Field 2">
+      </div>
+    </div>
+    <span class="text-xs px-5 py-2 bg-red-300 text-red-800 rounded " (click)="addData()">Add New</span>
 </div>
+
+
+{{details.valid}}

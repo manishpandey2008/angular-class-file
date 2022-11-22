@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-main',
@@ -9,16 +9,27 @@ import { FormControl, FormGroup } from '@angular/forms';
 export class MainComponent implements OnInit {
 
   formGroup=new FormGroup({
-    studentName:new FormControl(''),
-    studentDetails:new FormControl(),
-    studentClass:new FormControl(),
-    isStoreInfo: new FormControl(false),
-    gender:new FormControl('male')
+    studentDetails:new FormControl('',Validators.required),
   });
 
   constructor() { }
 
   ngOnInit(): void {
+    this.formGroup.valueChanges.subscribe(resp=>{
+      console.log("888888888888888888888888888888",this.formGroup.valid)
+    })
+    // let obs=Observable.create((resp:any)=>{
+    //   let x=0;
+    //   setInterval(()=>{
+    //     resp.next(x)
+    //     resp.error(new Error("this is error"))
+    //     x++;
+    //   },1000)
+    // })
+
+    // obs.subscribe((resp:any)=>{
+    //     console.log(resp)
+    // })
   }
 
 }

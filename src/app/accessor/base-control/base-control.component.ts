@@ -1,24 +1,27 @@
 import { Component, OnInit } from '@angular/core';
-import { ControlValueAccessor } from '@angular/forms';
+import { AbstractControl, ControlValueAccessor, ValidationErrors, Validator } from '@angular/forms';
 
 @Component({
   selector: 'app-base-control',
-  templateUrl: './base-control.component.html',
-  styleUrls: ['./base-control.component.css']
+  template: '',
 })
 export abstract  class BaseControlComponent implements ControlValueAccessor {
 
-  onChange = (_: any) => { }
+  onChange=(a:any)=>{}
+  onTouch=()=>{}
+  // onValidationChange =(a:any) => {};
 
-  onTouch = () => { }
-
-  abstract writeValue(obj: any): void;
+  abstract writeValue(obj: any):void;
+  // abstract validate(control: AbstractControl):ValidationErrors|null;
 
   registerOnChange(fn: any): void {
-    this.onChange = fn;
+    this.onChange=fn;
   }
   registerOnTouched(fn: any): void {
-    this.onTouch = fn;
+    this.onTouch=fn;
   }
 
+  // registerOnValidatorChange?(fn:any): void {
+  //   this.onValidationChange=fn
+  // }
 }

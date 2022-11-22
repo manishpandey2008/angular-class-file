@@ -42,6 +42,7 @@ import { StudentPipe } from './pipe/student.pipe';
 import { MainComponent } from './accessor/main/main.component';
 import { CustomComponent } from './accessor/custom/custom.component';
 import { DetailsComponent } from './accessor/details/details.component';
+import { TestComponent } from './observable/test/test.component';
 
 @NgModule({
   declarations: [
@@ -82,7 +83,8 @@ import { DetailsComponent } from './accessor/details/details.component';
     StudentPipe,
     MainComponent,
     CustomComponent,
-    DetailsComponent
+    DetailsComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,

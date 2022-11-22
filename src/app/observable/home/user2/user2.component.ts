@@ -17,11 +17,14 @@ export class User2Component implements OnInit {
     //     console.log(resp)
     //     this.isView=resp
     // })
-
     this.userService.subject.subscribe(resp=>{
         console.log(resp)
         this.isView=resp
     })
+  }
+
+  setVal(){
+    this.userService.setData("My name is manish");
   }
 
 }

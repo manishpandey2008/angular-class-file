@@ -1,18 +1,20 @@
 <div [formGroup]="formGroup">
 
-  <input type="text" formControlName="studentName" class=" border-2 border-red-800 "> <br> <br>
+  <!-- <input type="text" formControlName="studentName" class=" border-2 border-red-800 "> <br> <br>
 
-  <app-custom formControlName="studentClass"></app-custom>
+  <app-custom formControlName="studentClass"></app-custom> -->
 
-  <app-details formControlName="studentDetails"></app-details>
+  <app-details formControlName="studentDetails"  [range]="[0,20]"></app-details>
 
-  <input type="checkbox" name="" id="" formControlName="isStoreInfo">Store Information<br><br>
+  <!-- <input type="checkbox" name="" id="" formControlName="isStoreInfo">Store Information<br><br>
 
   <input type="radio" name="gender" id="" formControlName="gender" value="male"> Male
-  <input type="radio" name="gender" id="" formControlName="gender" value="female"> Female
+  <input type="radio" name="gender" id="" formControlName="gender" value="female"> Female -->
+
+  <span class="text-xs px-5 py-2 text-red-800 rounded " [ngClass]="{'bg-red-300': formGroup.invalid,'bg-green-300': formGroup.valid}">Save</span>
 </div>
 
 
-{{formGroup.value | json}}
+{{formGroup.valid}}
 
 

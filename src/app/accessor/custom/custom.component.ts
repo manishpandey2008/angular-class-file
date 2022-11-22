@@ -1,5 +1,5 @@
 import { Component, forwardRef, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, NG_VALUE_ACCESSOR } from '@angular/forms';
+import { ControlValueAccessor, FormBuilder, FormControl, FormGroup, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { takeUntil } from 'rxjs';
 import { BaseControlComponent } from '../base-control/base-control.component';
 
@@ -15,23 +15,32 @@ import { BaseControlComponent } from '../base-control/base-control.component';
     }
   ]
 })
-export class CustomComponent extends BaseControlComponent  {
+export class CustomComponent implements ControlValueAccessor  {
 
   text:string=""
 
   constructor() {
-    super();
   }
 
   changeVal(data:any){
     const self = this;
-    self.onChange(data);
+    this.OnChange(this.text)
   }
 
   writeValue(obj: any): void {
     if(obj){
       this.text=obj
     }
+  }
+
+  OnChange=(a:any)=>{}
+  OnTouched=()=>{}
+
+  registerOnChange(fn: any): void {
+    this.OnChange=fn
+  }
+  registerOnTouched(fn: any): void {
+    this.OnTouched=fn
   }
 
 }
