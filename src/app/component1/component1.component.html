@@ -1,3 +1,8 @@
-<p>component 1 works!</p>
+<!-- <p>component 1 works!</p> -->
 
-<app-component2 [abc]="jsonData" [inputData2]="'text-green-900'"  (outputData)="comp1Fun($event)"></app-component2>
+<!-- <app-component2 [abc]="jsonData" [inputData2]="'text-green-900'"  (outputData)="comp1Fun($event)"></app-component2> -->
+
+
+<span class="px-2 py-2 bg-red-200 mx-2" (click)="fun('USD')">Click 1</span>
+<span class="px-2 py-2 bg-red-200 mx-2" (click)="fun('INR')">Click 2</span>
+<span class="px-2 py-2 bg-red-200 mx-2" (click)="fun('EUR')">Click 2</span>

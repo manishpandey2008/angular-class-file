@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-component1',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./component1.component.css']
 })
 export class Component1Component implements OnInit {
+
+  @Output() currencyResp=new EventEmitter;
 
   constructor() { }
 
@@ -16,6 +18,10 @@ export class Component1Component implements OnInit {
 
   comp1Fun(event:any){
       console.log("This is component 1",event)
+  }
+
+  fun(currency:any){
+    this.currencyResp.emit(currency)
   }
 
 }

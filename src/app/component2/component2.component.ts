@@ -7,10 +7,12 @@ import { Component, EventEmitter, Input, OnInit, Output, ViewChild } from '@angu
 })
 export class Component2Component implements OnInit {
 
-  @Input('abc') inputData:any;
-  @Input() inputData2:any;
+  @Input() datas:any[]=[]
 
-  @Output() outputData=new EventEmitter;
+  // @Input('abc') inputData:any;
+  // @Input() inputData2:any;
+
+  // @Output() outputData=new EventEmitter;
 
 
 
@@ -21,9 +23,9 @@ export class Component2Component implements OnInit {
   ngOnInit(): void {
   }
 
-  fun(){
-      // console.log("Testing on component 2")
-      this.outputData.emit({val:"Test is text field",color:"text-red-600"})
-  }
+  // fun(){
+  //     // console.log("Testing on component 2")
+  //     this.outputData.emit({val:"Test is text field",color:"text-red-600"})
+  // }
 
 }

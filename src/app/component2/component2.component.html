@@ -1,7 +1,15 @@
-<p>component2 works!</p>
+<!-- <p>component2 works!</p> -->
 
 <!-- <input type="text" [value]="inputData.val" [class]="inputData.color" class="border-2 border-red-300">-->
 
-<p [class]="inputData2" class="hover:hidden ">This is my new Decorator</p>
+<!-- <p [class]="inputData2" class="hover:hidden ">This is my new Decorator</p>
 
-<span class="px-3 py-1 bg-red-200 text-red-900 rounded-md cursor-pointer" (click)="fun()">Button</span>
+<span class="px-3 py-1 bg-red-200 text-red-900 rounded-md cursor-pointer" (click)="fun()">Button</span> -->
+
+
+<div *ngFor="let item of datas">
+    <div>
+      <span>{{item.amount}}</span>
+      <span>{{item.currency}}</span>
+    </div>
+</div>
